@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Análise | Dojo</title><link rel="stylesheet" href="style.css"></head>
+<body class="samurai-bg">
+<div class="samurai-overlay"></div>
+
+<header class="topbar"><h2>Analisar Texto</h2><button class="ghost" onclick="voltar()">Voltar</button></header>
+
+<main class="centered column card">
+  <textarea id="texto_analise" placeholder="Cole o texto..."></textarea>
+  <button class="btn" onclick="analisarTexto()">Analisar</button>
+  <pre id="analise_res" class="resultado"></pre>
+</main>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

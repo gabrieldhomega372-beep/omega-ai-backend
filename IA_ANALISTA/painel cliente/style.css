@@ -1,0 +1,93 @@
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body,html{height:100%;font-family:Inter,Segoe UI,Roboto,system-ui,Arial,sans-serif;color:#ddd}
+
+/* Background - use imagem externa ou local */
+.samurai-bg{
+  background: radial-gradient(circle at 10% 20%, rgba(60,0,80,0.14), transparent 10%),
+              linear-gradient(180deg, #070707 0%, #050505 100%);
+  min-height:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+/* overlay neblina */
+.samurai-overlay{
+  position:fixed;left:0;top:0;width:100%;height:100%;
+  background:linear-gradient(180deg,rgba(0,0,0,0.72),rgba(0,0,0,0.8));
+  z-index:0;
+  pointer-events:none;
+}
+
+/* centered helpers */
+.centered{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 40px)}
+.column{flex-direction:column}
+
+/* cards */
+.card{
+  background:linear-gradient(180deg, rgba(8,8,8,0.8), rgba(12,12,12,0.7));
+  border:1px solid rgba(96,35,255,0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  border-radius:10px;
+  padding:22px;
+  z-index:2;
+}
+
+/* login card specifics */
+.login-card{width:360px; text-align:left}
+.login-card .brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.login-card h1{color:#fff;font-size:20px}
+.login-card .sub{color:#bbb;font-size:13px}
+.login-card input{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:#0b0b0b;color:#fff}
+.login-card .btn{width:100%;padding:12px;background:#5f00ff;border:none;color:#fff;border-radius:6px;cursor:pointer;font-weight:600}
+.login-card .btn:hover{filter:brightness(1.07)}
+.error{color:#ff6b6b;margin-top:8px}
+
+/* topbar */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;z-index:3}
+.topbar h2{color:#fff}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;color:#ddd;border-radius:6px;cursor:pointer}
+
+/* layout */
+.main-grid{display:grid;grid-template-columns:220px 1fr;gap:18px;padding:18px;min-height:calc(100vh - 80px);z-index:2}
+.sidebar nav{display:flex;flex-direction:column;gap:10px;padding:12px}
+.sidebar a{color:#ddd;text-decoration:none;padding:10px;border-radius:8px;display:block}
+.sidebar a:hover{background:linear-gradient(90deg, rgba(90,0,255,0.06), rgba(255,255,255,0.02))}
+
+/* cards grid */
+.cards{display:flex;gap:12px;margin-bottom:18px}
+.stat{flex:1;padding:18px;text-align:center}
+.stat h3{color:#bfb9ff;font-size:14px}
+.stat p{font-size:22px;font-weight:700;color:#fff}
+
+/* panel */
+.panel{padding:18px}
+
+/* responsive */
+@media (max-width:900px){
+  .main-grid{grid-template-columns:1fr; padding:10px}
+  .sidebar{order:2}
+}
+
+/* small visual samurai touches */
+.katana{filter:drop-shadow(0 8px 18px rgba(96,35,255,0.12));}
+.perfil-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+}
+
+.perfil-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 8px #000);
+}
+
+.perfil-nome {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}

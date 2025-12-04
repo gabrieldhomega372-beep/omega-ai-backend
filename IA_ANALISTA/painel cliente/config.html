@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Configurações</title><link rel="stylesheet" href="style.css"></head>
+<body class="samurai-bg">
+<div class="samurai-overlay"></div>
+
+<header class="topbar"><h2>Configurações</h2><button class="ghost" onclick="voltar()">Voltar</button></header>
+
+<main class="centered card column">
+  <label>Modelo IA</label>
+  <input id="conf_modelo" placeholder="gpt-5-mini">
+  <label>Limite por dia</label>
+  <input id="conf_limite" type="number" placeholder="100">
+  <button class="btn" onclick="salvarConfig()">Salvar</button>
+  <p id="conf_msg"></p>
+</main>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

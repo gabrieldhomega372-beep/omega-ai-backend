@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel | IA Empresarial</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d0d;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Fundo com sombras de árvores e samurai */
+        .bg-art {
+            position: fixed;
+            inset: 0;
+            background: url('https://i.imgur.com/02Z9v5L.png') center/cover no-repeat;
+            opacity: 0.06;
+            pointer-events: none;
+            filter: blur(3px);
+        }
+
+        .app {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 260px;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid #222;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            border: 2px solid #444;
+            object-fit: cover;
+        }
+
+        .profile h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* MENU */
+        .menu a {
+            display: block;
+            padding: 12px 14px;
+            border-radius: 6px;
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.2s;
+        }
+
+        .menu a:hover {
+            background: #ffffff15;
+        }
+
+        /* CONTEÚDO */
+        .content {
+            flex: 1;
+            padding: 35px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 25px;
+            border: 1px solid #ffffff10;
+        }
+
+        button {
+            background: white;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg-art"></div>
+
+<div class="app">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img id="pfp" src="https://i.imgur.com/1XH2xQk.png" alt="foto">
+            <h3>Usuário</h3>
+        </div>
+
+        <div class="menu">
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="conteudo.html">📄 Conteúdo</a>
+            <a href="users.html">👥 Usuários</a>
+            <a href="settings.html">⚙️ Configurações</a>
+        </div>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+        <h1>Painel da IA</h1>
+
+        <div class="card">
+            <h3>Atalhos rápidos</h3>
+            <button onclick="abrirGerar()">Gerar conteúdo</button>
+            <button onclick="abrirAnalise()">Analisar texto</button>
+        </div>
+
+        <div class="card">
+            <h3>Status da IA</h3>
+            <p>Modelo: <b>GPT-5-Turbo</b></p>
+            <p>Requests hoje: <b>0</b></p>
+            <p>Status: <b style="color: #4eff4e">Online</b></p>
+        </div>
+    </main>
+</div>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

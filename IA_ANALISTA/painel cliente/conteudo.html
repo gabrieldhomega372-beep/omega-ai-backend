@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Conteúdo | Dojo</title><link rel="stylesheet" href="style.css"></head>
+<body class="samurai-bg">
+<div class="samurai-overlay"></div>
+
+<header class="topbar"><h2>Gerar Conteúdo</h2><button class="ghost" onclick="voltar()">Voltar</button></header>
+
+<main class="centered column card">
+  <input id="tema" placeholder="Tema (ex: copy pra anúncio)"/>
+  <textarea id="prompt" placeholder="Informe instruções detalhadas..."></textarea>
+  <button class="btn" onclick="gerarConteudo()">Gerar</button>
+  <pre id="resultado" class="resultado"></pre>
+</main>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
